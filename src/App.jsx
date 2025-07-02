@@ -1,23 +1,24 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import ProcessPage from './pages/ProcessPage';
-import WhyUsPage from './pages/WhyUsPage';
+import TechnologyPage from './pages/TechnologyPage';
 import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-        <Header />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/process" element={<ProcessPage />} />
-          <Route path="/why-us" element={<WhyUsPage />} />
+          <Route path="/technology" element={<TechnologyPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
